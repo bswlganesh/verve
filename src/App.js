@@ -1,4 +1,6 @@
 import React from 'react'
+import { LenisContext } from './context/LenisContext'
+import { useLenis } from './hooks/useLenis'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import AboutSection from './components/AboutSection'
@@ -11,8 +13,10 @@ import Footer from './components/Footer'
 
 
 export default function App() {
+  const lenis = useLenis();
+
   return (
-    <>
+    <LenisContext.Provider value={lenis}>
       <Header />
       <Hero />
       <AboutSection />
@@ -22,6 +26,6 @@ export default function App() {
       <PlaysSection />
       <TeamSection />
       <Footer/>
-    </>
+    </LenisContext.Provider>
   )
 }

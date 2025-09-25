@@ -23,7 +23,7 @@ const PlaysSection = () => {
   ];
 
   return (
-    <section className="plays-section">
+    <section className="plays-section" id="plays">
       <h2 className="plays-section-heading">OUR PLAYS</h2>
       <p className="plays-intro-text">
         Every year, Verve crafts a powerful and thought-provoking street play on a pressing social issue. From mental health to political satire, our productions aim to spark conversation and inspire change.

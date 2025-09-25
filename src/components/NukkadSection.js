@@ -38,7 +38,7 @@ const NukkadSection = () => {
   ];
 
   return (
-    <section className="nukkad-section">
+    <section className="nukkad-section" id="wa">
       <h2 className="nukkad-section-heading">Nukkad ki Awaazein</h2>
       <div className="nukkad-cards-container">
         {cardsData.map((card, index) => (

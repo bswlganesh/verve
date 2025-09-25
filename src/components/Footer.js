@@ -1,20 +1,23 @@
-import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import React, { useContext } from 'react';
+import { LenisContext } from '../context/LenisContext';
+// import footerImage from '../assets/verve-logo.png'; // Update with the correct path to your image
 import './Footer.css';
 
 const Footer = () => {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollToPlugin);
-  }, []);
+  const lenis = useContext(LenisContext);
 
   const scrollToTop = () => {
-    gsap.to(window, { duration: 1.5, scrollTo: 0, ease: 'power2.inOut' });
+    lenis?.scrollTo(0, { duration: 1.5 });
   };
 
   return (
     <>
       <footer className="footer-container">
+        {/* Image on top of the curve */}
+        <div className="footer-top-image-container">
+          {/* <img src={footerImage} alt="Verve" className="footer-top-image" /> */}
+        </div>
+
         <div className="footer-content">
           {/* Column 1: Contact */}
           <div className="footer-column">

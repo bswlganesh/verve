@@ -3,7 +3,7 @@ import './ManthanSection.css';
 
 const ManthanSection = () => {
   return (
-    <section className="manthan-section">
+    <section className="manthan-section" id="manthan">
       <div className="manthan-overlay"></div>
       <div className="manthan-content">
         <div className="manthan-title-bar">

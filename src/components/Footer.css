@@ -21,6 +21,26 @@
   border-bottom-right-radius: 0;
 }
 
+/* Image on top of the curve */
+.footer-top-image-container {
+  position: absolute;
+  top: -50px; /* Adjust to position the image vertically on the curve */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Above the curve pseudo-element */
+  width: 100px; /* Example width */
+  height: 100px; /* Example height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-top-image {
+  max-width: 100%;
+  height: auto;
+}
+
+
 /* Footer Content & Columns */
 .footer-content {
   display: flex;
