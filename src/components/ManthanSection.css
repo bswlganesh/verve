@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+.manthan-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'); /* Placeholder collage */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.manthan-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 15, 25, 0.9); /* Dark overlay */
+  z-index: 1;
+}
+
+.manthan-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.manthan-title-bar {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.manthan-main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tiers-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.tier-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tier-banner {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.manthan-logo-font {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+/* Swadesh & Pardes Banners */
+.swadesh-banner,
+.pardes-banner {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Mahotsav Banner */
+.mahotsav-banner {
+  background-color: #f4f1eb; /* Off-white paper texture */
+  color: #6a1b9a; /* Purple */
+  padding: 0;
+}
+
+.mahotsav-border {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid #6a1b9a;
+  /* Repeating pattern for border */
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(106, 27, 154, 0.1) 10px, rgba(106, 27, 154, 0.1) 20px),
+                    repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(106, 27, 154, 0.1) 10px, rgba(106, 27, 154, 0.1) 20px);
+}
+
+.tier-description {
+  padding: 0 1rem;
+}
+
+.tier-description h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.tier-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.manthan-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.manthan-cta-button {
+  background-color: #e0e0e0;
+  color: #212121;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px; /* Pill-shaped */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.manthan-cta-button:hover {
+  background-color: #fff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+  .tiers-container {
+    grid-template-columns: 1fr;
+  }
+  .manthan-main-title {
+    font-size: 2rem;
+  }
+}
