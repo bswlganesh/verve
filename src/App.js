@@ -7,6 +7,7 @@ import NukkadSection from './components/NukkadSection'
 import ManthanSection from './components/ManthanSection'
 import PlaysSection from './components/PlaysSection'
 import TeamSection from './components/TeamSection'
+import Footer from './components/Footer'
 
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
       <NukkadSection />
       <PlaysSection />
       <TeamSection />
+      <Footer/>
     </>
   )
 }
