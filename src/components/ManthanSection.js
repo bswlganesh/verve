@@ -1,9 +1,9 @@
 import React from 'react';
 import './ManthanSection.css';
 
-import manthanSwadesh from '../assets/manthanleft.png';
-import manthanMahotsav from '../assets/manhan1.png';
-import manthanPardes from '../assets/manthanright.png';
+import manthanSwadesh from '../assets/manthanleft.webp';
+import manthanMahotsav from '../assets/manhan1.webp';
+import manthanPardes from '../assets/manthanright.webp';
 
 const ManthanSection = () => {
   return (

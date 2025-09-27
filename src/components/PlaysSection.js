@@ -1,19 +1,21 @@
 import React from 'react';
 import './PlaysSection.css';
 
-import ilzaamEAdalatImage from '../assets/Ilzaam-E-Adaalat.jpg';
-import daasTaanImage from '../assets/Daas-Taan.jpg';
-import notSoLawfulImage from '../assets/NotSoLawful.jpg';
-import jalHitMeiJaariImage from '../assets/JalHitMeiJaari.png';
-import emotionalAtyachaarImage from '../assets/EmotionalAtyachaar.jpg';
-import fasciTantraImage from '../assets/Fasci-Tantra.jpg';
+import ilzaamEAdalatImage from '../assets/Ilzaam-E-Adaalat.webp';
+import daasTaanImage from '../assets/Daas-Taan.webp';
+import notSoLawfulImage from '../assets/NotSoLawful.webp';
+import jalHitMeiJaariImage from '../assets/JalHitMeiJaari.webp';
+import emotionalAtyachaarImage from '../assets/EmotionalAtyachaar.webp';
+import fasciTantraImage from '../assets/Fasci-Tantra.webp';
 
 const PlayCard = ({ title, imageUrl }) => (
   <div className="play-card">
-    <div
+    <img
+      src={imageUrl}
+      alt={title}
       className="play-card-background"
-      style={{ backgroundImage: `url(${imageUrl})` }}
-    ></div>
+      loading="lazy"
+    />
     <div className="play-card-overlay"></div>
     <h3 className="play-card-title">{title}</h3>
   </div>

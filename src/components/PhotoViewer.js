@@ -97,11 +97,6 @@ const PhotoViewer = ({ images, currentIndex, setCurrentImageIndex, onClose }) =>
           src={images[currentIndex]}
           alt={`View ${currentIndex + 1}`}
           onLoad={() => setIsLoading(false)}
-          // Use srcset for responsive images
-          srcSet={`${images[currentIndex].replace('w=600', 'w=600')} 600w,
-                   ${images[currentIndex].replace('w=600', 'w=1200')} 1200w,
-                   ${images[currentIndex].replace('w=600', 'w=1800')} 1800w`}
-          sizes="(max-width: 768px) 90vw, (max-width: 1200px) 80vw, 1200px"
         />
       </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './NukkadSection.css';
 
-import nkaImage1 from '../assets/nka1.png';
+import nkaImage1 from '../assets/nka1.webp';
 import nkaImage2 from '../assets/nka2.png';
 
 const ContentCard = ({ subHeading, title, imageUrl, imageAlt, description, ctaText, ctaUrl, imageClassName }) => (

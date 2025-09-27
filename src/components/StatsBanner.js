@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import './StatsBanner.css';
 
-const AnimatedNumber = ({ end, duration = 50 }) => {
+const AnimatedNumber = React.memo(({ end, duration = 50 }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -22,9 +22,9 @@ const AnimatedNumber = ({ end, duration = 50 }) => {
   }, [end, duration]);
 
   return <span className="stat-number">{count}</span>;
-};
+});
 
-const StatItem = ({ icon, number, description, isVisible }) => (
+const StatItem = React.memo(({ icon, number, description, isVisible }) => (
   <div className="stat-item">
     <div className="stat-main">
       <div className="stat-icon">{icon}</div>
@@ -32,7 +32,7 @@ const StatItem = ({ icon, number, description, isVisible }) => (
     </div>
     <p className="stat-description">{description}</p>
   </div>
-);
+));
 
 const StatsBanner = () => {
   const { ref, inView } = useInView({

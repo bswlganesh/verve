@@ -9,7 +9,7 @@
     text-align: center;
     overflow: hidden;
     /* Underlying texture: Replace with your actual collage image URL */
-    background-image: url('../assets/heroimage.png');
+    background-image: url('../assets/heroimage.webp');
     background-size: cover;
     background-position: center;
     color: white;
