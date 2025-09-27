@@ -24,9 +24,9 @@ const AboutSection = () => {
           <p className="about-body-text">
             Verve – The Street Play Society of SSCBS was established in 2006, and aims to bring about a change by focusing on sensitising masses on social evils prevailing in our society through the medium of street play.
           </p>
-          <button className="about-cta-button">
-            About us &gt;
-          </button>
+          <a className="about-cta-button" href="#about">
+            About us
+          </a>
         </div>
 
         <div className="about-right-column">

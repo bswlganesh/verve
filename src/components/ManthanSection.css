@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'); /* Placeholder collage */
+ 
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -138,8 +138,9 @@
 .manthan-cta-group {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-top: 2rem;
+
 }
 
 .manthan-cta-button {
@@ -165,5 +166,10 @@
   }
   .manthan-main-title {
     font-size: 2rem;
+  }
+  .manthan-cta-group {
+  margin-bottom: 2rem;
+
+
   }
 }
