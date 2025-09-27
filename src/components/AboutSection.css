@@ -54,6 +54,7 @@
 }
 .about-scroll-icon {
     margin-top: 20px;
+    animation: levitate 2s ease-in-out infinite;
 }
 
 .about-main-content {
@@ -172,5 +173,17 @@
 @media (max-width: 576px) {
     .features-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@keyframes levitate {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
