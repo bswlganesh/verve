@@ -48,6 +48,8 @@
   align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
+      text-align: center;
+      
 }
 
 .footer-column {
