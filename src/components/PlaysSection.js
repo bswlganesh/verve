@@ -7,6 +7,7 @@ import notSoLawfulImage from '../assets/NotSoLawful.webp';
 import jalHitMeiJaariImage from '../assets/JalHitMeiJaari.webp';
 import emotionalAtyachaarImage from '../assets/EmotionalAtyachaar.webp';
 import fasciTantraImage from '../assets/Fasci-Tantra.webp';
+import LaIlaajImage from '../assets/LaIlaaj.webp';
 
 const PlayCard = ({ title, imageUrl }) => (
   <div className="play-card">
@@ -23,12 +24,14 @@ const PlayCard = ({ title, imageUrl }) => (
 
 const PlaysSection = () => {
   const playsData = [
-    { title: 'Ilzaam-E-Adaalat', imageUrl: ilzaamEAdalatImage, playUrl: '#' },
-    { title: 'Daas-Taan', imageUrl: daasTaanImage, playUrl: '#' },
-    { title: 'Not So Lawful', imageUrl: notSoLawfulImage, playUrl: '#' },
-    { title: 'Jal Hit Mei Jaari', imageUrl: jalHitMeiJaariImage, playUrl: '#' },
-    { title: 'Emotional Atyachaar', imageUrl: emotionalAtyachaarImage, playUrl: '#' },
-    { title: 'Fasci - Tantra', imageUrl: fasciTantraImage, playUrl: '#' },
+    
+    { title: 'La-Ilaaj', imageUrl: LaIlaajImage, playUrl: 'https://photos.app.goo.gl/RJaCt8sbVTkbhdSt7' },
+    { title: 'Ilzaam-E-Adaalat', imageUrl: ilzaamEAdalatImage, playUrl: 'https://youtu.be/9lDPIyJuF2E?si=LcoIXwDqiq0isbkm' },
+    { title: 'Daas-Taan', imageUrl: daasTaanImage, playUrl: 'https://youtu.be/L_fZJ75bqgs?si=C26zZKhzWKVSZR50' },
+    { title: 'Not So Lawful', imageUrl: notSoLawfulImage, playUrl: 'https://youtu.be/LzKQzoG33E0?si=JTqrWUKjMQeJaPKa' },
+    { title: 'Jal Hit Mei Jaari', imageUrl: jalHitMeiJaariImage, playUrl: 'https://youtu.be/jXfablup7QY?si=GJkw1lWLz47MbGJ4' },
+    { title: 'Emotional Atyachaar', imageUrl: emotionalAtyachaarImage, playUrl: 'https://youtu.be/vwRte4KznPg?si=ZU5P_W-ux3lYqvzc' },
+    { title: 'Fasci - Tantra', imageUrl: fasciTantraImage, playUrl: 'https://youtu.be/I585Au3wqns?si=AweY3MrefhCNpo0t' },
   ];
 
   return (
@@ -39,7 +42,7 @@ const PlaysSection = () => {
       </p>
       <div className="plays-grid">
         {playsData.map((play, index) => (
-          <a key={index} href={play.playUrl} className="play-card-link">
+          <a target='blank' key={index} href={play.playUrl} className="play-card-link">
             <PlayCard title={play.title} imageUrl={play.imageUrl} />
           </a>
         ))}

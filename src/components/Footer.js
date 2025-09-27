@@ -6,6 +6,19 @@ import './Footer.css';
 const Footer = () => {
   const lenis = useContext(LenisContext);
 
+  const contacts = [
+    {
+      name: 'Baswal Ganesh',
+      role: 'badmos',
+      phone: '+91 6287982169',
+    },
+    {
+      name: 'Aryan Gauba',
+      role: 'Vice-President',
+      phone: '+91 9811778876',
+    },
+  ];
+
   const scrollToTop = () => {
     lenis?.scrollTo(0, { duration: 1.5 });
   };
@@ -22,16 +35,15 @@ const Footer = () => {
           {/* Column 1: Contact */}
           <div className="footer-column">
             <h3>CONTACT</h3>
-            <p>
-              <strong>Devam Juneja ( President )</strong>
-              <br />
-              +91 971110840
-            </p>
-            <p>
-              <strong>Aryan Gauba ( Vice-President )</strong>
-              <br />
-              +91 9811778876
-            </p>
+            {contacts.map((contact, index) => (
+              <p key={index}>
+                <strong>
+                  {contact.name} ( {contact.role} )
+                </strong>
+                <br />
+                {contact.phone}
+              </p>
+            ))}
           </div>
 
           {/* Column 2: Location */}
@@ -50,9 +62,11 @@ const Footer = () => {
           <div className="footer-column">
             <h3>FOLLOW US</h3>
             <ul>
-              <li><a href="google.com">Facebook</a></li>
-              <li><a href="google.com">Twitter</a></li>
-              <li><a href="google.com">Instagram</a></li>
+              <li><a href="https://open.spotify.com/artist/7fKsvX6XWM4AfjD5jQR93L">NKA</a></li>
+              <li><a href="https://www.youtube.com/@manthansscbs1203">Manthan</a></li>
+              <li><a href="https://www.instagram.com/verve.cbs/">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/verve-the-street-play-society-of-sscbs/posts/?feedView=all">Linkedin</a></li>
+             
             </ul>
           </div>
         </div>
