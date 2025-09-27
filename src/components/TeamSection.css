@@ -36,6 +36,7 @@
 }
 
 .gallery-item {
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;

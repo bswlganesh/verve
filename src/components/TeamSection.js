@@ -2,14 +2,16 @@ import { useState } from 'react';
 import './TeamSection.css';
 import PhotoViewer from './PhotoViewer';
 
+import photo1 from '../assets/album/photo1.jpg';
+import photo2 from '../assets/album/photo2.jpg';
+import photo3 from '../assets/album/photo3.jpg';
+import photo4 from '../assets/album/photo4.jpg';
+import photo5 from '../assets/album/photo5.jpg';
+import photo6 from '../assets/album/photo6.jpg';
+
 // Placeholder data for team members
-const teamMembers = [
-  { id: 1, name: 'Alex Doe', imageUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80' },
-  { id: 2, name: 'Jane Smith', imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80' },
-  { id: 3, name: 'Samuel Green', imageUrl: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80' },
-  { id: 4, name: 'Priya Singh', imageUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80' },
-  { id: 5, name: 'Chris Lee', imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80' },
-  { id: 6, name: 'Maria Garcia', imageUrl: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80' },
+const teamImages = [
+  photo1, photo2, photo3, photo4, photo5, photo6
 ];
 
 const TeamSection = () => {
@@ -33,11 +35,11 @@ const TeamSection = () => {
           <p className="team-subtitle">Meet the talented faces behind our success</p>
         </div>
         <div className="photo-gallery-grid">
-          {teamMembers.map((member, index) => (
-            <div key={member.id} className="gallery-item" onClick={() => openViewer(index)}>
+          {teamImages.map((imageUrl, index) => (
+            <div key={index} className="gallery-item" onClick={() => openViewer(index)}>
               <img
-                src={member.imageUrl}
-                alt={member.name}
+                src={imageUrl}
+                alt={`Team member ${index + 1}`}
                 loading="lazy"
               />
             </div>
@@ -46,7 +48,7 @@ const TeamSection = () => {
       </section>
       {viewerOpen && (
         <PhotoViewer
-          images={teamMembers.map(m => m.imageUrl)}
+          images={teamImages}
           currentIndex={currentImageIndex}
           onClose={closeViewer}
           setCurrentImageIndex={setCurrentImageIndex}

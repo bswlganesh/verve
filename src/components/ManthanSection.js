@@ -1,6 +1,10 @@
 import React from 'react';
 import './ManthanSection.css';
 
+import manthanSwadesh from '../assets/manthanleft.png';
+import manthanMahotsav from '../assets/manhan1.png';
+import manthanPardes from '../assets/manthanright.png';
+
 const ManthanSection = () => {
   return (
     <section className="manthan-section" id="manthan">
@@ -13,10 +17,11 @@ const ManthanSection = () => {
         <div className="tiers-container">
           {/* Tier 1: Swadesh */}
           <div className="tier-column">
-            <div className="tier-banner swadesh-banner">
-              <span className="manthan-logo-font">Manthan</span>
-              <span className="manthan-logo-font">SWADESH</span>
-            </div>
+            <img
+              src={manthanSwadesh}
+              alt="Manthan Swadesh Banner"
+              className="tier-banner-image"
+            />
             <div className="tier-description">
               <h3>Manthan Swadesh</h3>
               <p>
@@ -27,11 +32,11 @@ const ManthanSection = () => {
 
           {/* Tier 2: Mahotsav */}
           <div className="tier-column">
-            <div className="tier-banner mahotsav-banner">
-              <div className="mahotsav-border">
-                <span className="manthan-logo-font">Manthan Mahotsav</span>
-              </div>
-            </div>
+            <img
+              src={manthanMahotsav}
+              alt="Manthan Mahotsav Banner"
+              className="tier-banner-image"
+            />
             <div className="tier-description">
               <h3>Manthan Mahotsav</h3>
               <p>
@@ -42,10 +47,11 @@ const ManthanSection = () => {
 
           {/* Tier 3: Pardes */}
           <div className="tier-column">
-            <div className="tier-banner pardes-banner">
-              <span className="manthan-logo-font">Manthan</span>
-              <span className="manthan-logo-font">PARDES</span>
-            </div>
+            <img
+              src={manthanPardes}
+              alt="Manthan Pardes Banner"
+              className="tier-banner-image"
+            />
             <div className="tier-description">
               <h3>Manthan Pardes</h3>
               <p>
@@ -56,9 +62,24 @@ const ManthanSection = () => {
         </div>
 
         <div className="manthan-cta-group">
-          <button className="manthan-cta-button">YouTube</button>
-          <button className="manthan-cta-button">Instagram</button>
-          <button className="manthan-cta-button">Spotify</button>
+          <a
+            href="https://www.youtube.com/@manthansscbs1203" // Replace with your YouTube link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="manthan-cta-button"
+          >YouTube</a>
+          <a
+            href="https://www.instagram.com/manthan.cbs?igsh=OTg2YmowNHRzd2lq" // Replace with your Instagram link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="manthan-cta-button"
+          >Instagram</a>
+          <a
+            href="https://open.spotify.com/artist/7fKsvX6XWM4AfjD5jQR93L" // Replace with your Spotify link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="manthan-cta-button"
+          >Spotify</a>
         </div>
       </div>
     </section>

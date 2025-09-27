@@ -8,7 +8,7 @@
     font-family: 'Helvetica Neue', sans-serif;
 }
 
-.about-background-graphic {
+/* .about-background-graphic {
     position: absolute;
     top: 0;
     right: -10%;
@@ -25,7 +25,7 @@
     opacity: 0.4;
     z-index: 0;
     pointer-events: none;
-}
+} */
 
 .about-heading {
     text-align: center;
@@ -42,14 +42,16 @@
 }
 
 .about-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     font-weight: 400;
     color: #666666;
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
     line-height: 1.5;
 }
-
+.about-verve{
+   color: #a98af8;
+}
 .about-scroll-icon {
     margin-top: 20px;
 }
@@ -60,11 +62,14 @@
     align-items: flex-start;
     position: relative;
     z-index: 1;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .about-left-column {
     flex: 1;
     max-width: 40%;
+    align-self: center;
 }
 
 .about-what-we-do-title {
@@ -85,7 +90,7 @@
     background-color: #a98af8;
     color: #FFFFFF;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 12px 24px;
     font-size: 1rem;
     font-weight: 600;

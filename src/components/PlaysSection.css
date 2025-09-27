@@ -16,7 +16,9 @@
 }
 
 .plays-intro-text {
-    max-width: 700px;
+        max-width: 1280px;
+
+
     margin: 0 auto 60px auto;
     font-size: 1rem;
     color: #666666;
@@ -31,10 +33,15 @@
     margin: 0 auto;
 }
 
+.play-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* --- Individual Play Card --- */
 .play-card {
     position: relative;
-    aspect-ratio: 4 / 5; /* Maintain a consistent shape */
+    aspect-ratio: 16 / 9; /* Maintain a consistent shape */
     border-radius: 12px;
     overflow: hidden;
     display: flex;
@@ -64,7 +71,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(169, 138, 248, 0.65); /* Purple overlay */
+    background-color: rgba(0, 0, 0, 0.65); /* Purple overlay */
     transition: background-color 0.4s ease;
 }
 

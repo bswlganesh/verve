@@ -1,7 +1,10 @@
 import React from 'react';
 import './NukkadSection.css';
 
-const ContentCard = ({ subHeading, title, imageUrl, imageAlt, description, ctaText, imageClassName }) => (
+import nkaImage1 from '../assets/nka1.png';
+import nkaImage2 from '../assets/nka2.png';
+
+const ContentCard = ({ subHeading, title, imageUrl, imageAlt, description, ctaText, ctaUrl, imageClassName }) => (
   <div className="nukkad-card">
     <div className="nukkad-card-header">
       <p className="nukkad-card-subheading">{subHeading}</p>
@@ -11,7 +14,14 @@ const ContentCard = ({ subHeading, title, imageUrl, imageAlt, description, ctaTe
       <img src={imageUrl} alt={imageAlt} className={`nukkad-card-image ${imageClassName || ''}`} />
     </div>
     <p className="nukkad-card-description">{description}</p>
-    <button className="nukkad-cta-button">{ctaText}</button>
+    <a
+      href={ctaUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="nukkad-cta-button"
+    >
+      {ctaText}
+    </a>
   </div>
 );
 
@@ -20,19 +30,21 @@ const NukkadSection = () => {
     {
       subHeading: 'Nukkad ki Awaazein',
       title: 'AN INITIATIVE',
-      imageUrl: 'https://i.imgur.com/O3s5fA5.png', // Placeholder for turntable
+      imageUrl: nkaImage1, // Placeholder for turntable
       imageAlt: 'Vintage record player',
-      description: 'An initiative to bring the raw, powerful voices of the street to a wider audience through beautifully captured performances.',
+      description: '‘Nukkad ki Awaazein’, which caters to the Delhi Collegiate Theatre Circuit, professionally records and uploads all the music that is composed by various street theatre groups for their annual productions in a studio. Close to 50 teams are invited over two days to record 3-4 of their songs in an hour. It is in this way that close to 600 songs have been recorded to date, with the voices of ~1000 artists remaining easily accessible to everyone through Manthan’s YouTube channel. Some songs have gained a viewership of ~1M.',
       ctaText: 'Visit Us',
+      ctaUrl: 'https://www.youtube.com/@manthansscbs1203',
       imageClassName: 'turntable-image'
     },
     {
       subHeading: 'Spotify',
       title: 'NUKKAD KE GAANE',
-      imageUrl: 'https://i.imgur.com/yXg9x0f.png', // Placeholder for cassette
+      imageUrl: nkaImage2,
       imageAlt: 'Vintage audio cassette',
-      description: 'Listen to the soulful and energetic soundtracks from our plays, featuring original compositions and folk music adaptations.',
+      description: 'The songs, in a recent collaboration with Iris Studios, have also been uploaded onto streaming platforms like Spotify for better reach and ease of usage.',
       ctaText: 'Visit Us',
+      ctaUrl: 'https://open.spotify.com/artist/7fKsvX6XWM4AfjD5jQR93L',
       imageClassName: 'cassette-image'
     }
   ];
@@ -50,6 +62,7 @@ const NukkadSection = () => {
             imageAlt={card.imageAlt}
             description={card.description}
             ctaText={card.ctaText}
+            ctaUrl={card.ctaUrl}
             imageClassName={card.imageClassName}
           />
         ))}

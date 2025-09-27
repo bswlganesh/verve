@@ -1,6 +1,13 @@
 import React from 'react';
 import './PlaysSection.css';
 
+import ilzaamEAdalatImage from '../assets/Ilzaam-E-Adaalat.jpg';
+import daasTaanImage from '../assets/Daas-Taan.jpg';
+import notSoLawfulImage from '../assets/NotSoLawful.jpg';
+import jalHitMeiJaariImage from '../assets/JalHitMeiJaari.png';
+import emotionalAtyachaarImage from '../assets/EmotionalAtyachaar.jpg';
+import fasciTantraImage from '../assets/Fasci-Tantra.jpg';
+
 const PlayCard = ({ title, imageUrl }) => (
   <div className="play-card">
     <div
@@ -14,23 +21,25 @@ const PlayCard = ({ title, imageUrl }) => (
 
 const PlaysSection = () => {
   const playsData = [
-    { title: 'Ilzaam-E-Adaalat', imageUrl: 'https://unsplash.it/400/500?image=101' },
-    { title: 'Daas-Taan', imageUrl: 'https://unsplash.it/400/500?image=102' },
-    { title: 'Not So Lawful', imageUrl: 'https://unsplash.it/400/500?image=103' },
-    { title: 'Jal Hit Mei Jaari', imageUrl: 'https://unsplash.it/400/500?image=104' },
-    { title: 'Emotional Atyachaar', imageUrl: 'https://unsplash.it/400/500?image=105' },
-    { title: 'Fasci - Tantra', imageUrl: 'https://unsplash.it/400/500?image=106' },
+    { title: 'Ilzaam-E-Adaalat', imageUrl: ilzaamEAdalatImage, playUrl: '#' },
+    { title: 'Daas-Taan', imageUrl: daasTaanImage, playUrl: '#' },
+    { title: 'Not So Lawful', imageUrl: notSoLawfulImage, playUrl: '#' },
+    { title: 'Jal Hit Mei Jaari', imageUrl: jalHitMeiJaariImage, playUrl: '#' },
+    { title: 'Emotional Atyachaar', imageUrl: emotionalAtyachaarImage, playUrl: '#' },
+    { title: 'Fasci - Tantra', imageUrl: fasciTantraImage, playUrl: '#' },
   ];
 
   return (
     <section className="plays-section" id="plays">
       <h2 className="plays-section-heading">OUR PLAYS</h2>
       <p className="plays-intro-text">
-        Every year, Verve crafts a powerful and thought-provoking street play on a pressing social issue. From mental health to political satire, our productions aim to spark conversation and inspire change.
+        Each year’s annual production sees a different topic come to light. The production for 2021 focussed on National Security Laws in India, while for 2023, the topic was Dignity of Labour. The production goes through various stages: research (both primary and secondary), scripting, production, execution and music composition of the scenes. It is only after several iterations that a final performance piece is created for the primary purpose of Verve: provoking thought and emotion, where there was none before, on an issue that lagged behind in the shadows.
       </p>
       <div className="plays-grid">
         {playsData.map((play, index) => (
-          <PlayCard key={index} title={play.title} imageUrl={play.imageUrl} />
+          <a key={index} href={play.playUrl} className="play-card-link">
+            <PlayCard title={play.title} imageUrl={play.imageUrl} />
+          </a>
         ))}
       </div>
     </section>

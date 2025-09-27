@@ -3,6 +3,7 @@ import './PhotoViewer.css';
 
 const PhotoViewer = ({ images, currentIndex, setCurrentImageIndex, onClose }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [touchStart, setTouchStart] = useState(null);
 
   const goToPrevious = useCallback(() => {
     const isFirst = currentIndex === 0;
@@ -42,6 +43,31 @@ const PhotoViewer = ({ images, currentIndex, setCurrentImageIndex, onClose }) =>
     prevImage.src = images[prevIndex];
   }, [currentIndex, images]);
 
+  // Handle touch gestures for swiping
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    // We can add logic here for a "follow-finger" effect in the future
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStart === null) return;
+
+    const touchEnd = e.changedTouches[0].clientX;
+    const swipeDistance = touchStart - touchEnd;
+    const minSwipeDistance = 50; // Minimum distance in pixels for a swipe
+
+    if (swipeDistance > minSwipeDistance) {
+      goToNext();
+    } else if (swipeDistance < -minSwipeDistance) {
+      goToPrevious();
+    }
+
+    setTouchStart(null); // Reset touch start
+  };
+
   return (
     <div className="photo-viewer-overlay" onClick={onClose}>
       <button className="viewer-close-button" onClick={onClose}>
@@ -58,7 +84,13 @@ const PhotoViewer = ({ images, currentIndex, setCurrentImageIndex, onClose }) =>
         &lt;
       </button>
 
-      <div className="viewer-image-container" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="viewer-image-container"
+        onClick={(e) => e.stopPropagation()}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         {isLoading && <div className="viewer-spinner"></div>}
         <img
           className={`viewer-image ${isLoading ? 'loading' : ''}`}
