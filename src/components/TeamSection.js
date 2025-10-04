@@ -6,7 +6,7 @@ import photo1 from '../assets/album/photo1.jpg';
 import photo2 from '../assets/album/photo2.jpg';
 import photo3 from '../assets/album/photo3.jpg';
 import photo4 from '../assets/album/photo4.jpg';
-import photo5 from '../assets/album/photo5.jpg';
+
 import photo6 from '../assets/album/photo6.jpg';
 import photo7 from '../assets/album/photo7.jpg';
 import photo8 from '../assets/album/photo8.jpg';
@@ -16,7 +16,7 @@ import photo8 from '../assets/album/photo8.jpg';
 
 // Placeholder data for team members
 const teamImages = [
-  photo8,photo7,photo1, photo2, photo3, photo4, photo5, photo6
+  photo8,photo7,photo1, photo2, photo3, photo4, photo6
 ];
 
 const TeamSection = () => {

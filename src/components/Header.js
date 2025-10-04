@@ -24,7 +24,7 @@ export default function Header() {
         <nav className="nav-menu">
           <ul className="nav-list">
             <li><a href="#home" className="active" onClick={(e) => handleNavClick(e, '#home')}>Home</a></li>
-            <li><a href="#about" onClick={(e) => handleNavClick(e, '#about')}>AboutUs</a></li>
+            <li><a href="#about" onClick={(e) => handleNavClick(e, '#about')}>About Us</a></li>
             <li><a href="#manthan" onClick={(e) => handleNavClick(e, '#manthan')}>Manthan</a></li>
             <li><a href="#wa" onClick={(e) => handleNavClick(e, '#wa')}>NKA</a></li>
             <li><a href="#plays" onClick={(e) => handleNavClick(e, '#plays')}>Our Plays</a></li>
