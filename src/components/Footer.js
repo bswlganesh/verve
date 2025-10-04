@@ -8,19 +8,19 @@ const Footer = () => {
 
   const contacts = [
     {
-      name: 'Baswal Ganesh',
-      role: 'badmos',
-      phone: '+91 6287982169',
+      name: 'Kushagra Nanda',
+      role: 'President',
+      phone: '+91 9319886554',
     },
     {
-      name: 'Aryan Gauba',
+      name: 'Divansh Dhamija',
       role: 'Vice-President',
-      phone: '+91 9811778876',
+      phone: '+91 7428534050',
     },
   ];
 
   const scrollToTop = () => {
-    lenis?.scrollTo(0, { duration: 1.5 });
+    lenis?.scrollTo(0, { duration: 3 });
   };
 
   return (
@@ -82,7 +82,7 @@ const Footer = () => {
 
       {/* Back-to-Top Button */}
       <button className="back-to-top" onClick={scrollToTop} aria-label="Back to top">
-        ↑
+        ^
       </button>
     </>
   );
